@@ -2,9 +2,14 @@ package testFiles;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import sourceFiles.Item;
+import sourceFiles.Transaction;
 import sourceFiles.Bank;
 import sourceFiles.UserAccount;
 
@@ -61,6 +66,21 @@ public class UserAccountTest {
 		assertEquals(900,user.checkBalance(),0);
 		assertEquals(100,user2.checkBalance(),0);
 		
+	}
+	@Test
+	public void test5() {
+		List<Transaction> t = new ArrayList<Transaction>();
+		Transaction e = new Transaction();
+		e.setAmount(1000);
+		e.setDescription("NONE");
+		e.setType(0);
+		t.add(e);
+		assertEquals(t.get(0).getType(),user.getStatement().get(0).getType());
+	}
+	@Test
+	public void test6() {
+		Item item = new Item(1000);
+		user.purchase(item);
 	}
 
 }
