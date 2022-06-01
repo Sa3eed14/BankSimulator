@@ -81,6 +81,12 @@ public class UserAccountTest {
 	public void test6() {
 		Item item = new Item(1000);
 		user.purchase(item);
+		assertEquals(item.getPrice(),user.getPurchases().get(0).getPrice(),0);
+	}
+	@Test
+	public void test7() {
+		assertTrue(user.getCard().isValid());
+		assertTrue(user.hasCard());
 	}
 
 }

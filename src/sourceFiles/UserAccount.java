@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import testFiles.CreditCard;
+
 public class UserAccount implements Serializable {
 
 	private String firstName;
@@ -14,11 +16,14 @@ public class UserAccount implements Serializable {
 	private static int accountNumber;
 	private List<Transaction> bankStatement;
 	private List<Item> purchases;
+	private CreditCard card;
+	private boolean hasCard;
 	
 	public UserAccount() {
 		bankStatement=new ArrayList<Transaction>();
 		purchases = new ArrayList<Item>();
 		accountNumber++;
+		hasCard=false;
 	}
 
 	public void setFirstName(String string) {
@@ -125,6 +130,22 @@ public class UserAccount implements Serializable {
 	public int getAccountNumber() {
 		// TODO Auto-generated method stub
 		return this.accountNumber;
+	}
+
+	public List<Item> getPurchases() {
+		// TODO Auto-generated method stub
+		return this.purchases;
+	}
+
+	public CreditCard getCard() {
+		// TODO Auto-generated method stub
+		this.card= new CreditCard();
+		this.hasCard=true;
+		return this.card;
+		
+	}
+	public boolean hasCard() {
+		return this.hasCard;
 	}
 
 }

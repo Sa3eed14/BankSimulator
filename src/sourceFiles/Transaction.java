@@ -3,7 +3,7 @@ package sourceFiles;
 import java.util.Date;
 
 public class Transaction {
-	enum TransactionType{
+	public enum TransactionType{
 		DEPOSIT,WITHDRAWAL,PURCHASE,TRANSFER;
 	}
 
