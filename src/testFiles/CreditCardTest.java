@@ -8,6 +8,8 @@ import java.util.Date;
 import org.junit.Before;
 import org.junit.Test;
 
+import sourceFiles.CreditCard;
+
 public class CreditCardTest {
 
 	@Before

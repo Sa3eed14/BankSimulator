@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import testFiles.CreditCard;
-
 public class UserAccount implements Serializable {
 
 	private String firstName;
